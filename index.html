@@ -2,26 +2,33 @@
 <html>
 <head>
   <title>YTThumb Extractor</title>
-  <style>
-    body {
-      width: 400px;
-      height: 200px;
-      padding: 10px;
-    }
-  </style>
+ 
+   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="module" src="popup.js"></script>
 </head>
 <body>
-  <img src=""  id="ThumbId">
 
-  <select name="res"  id="selectRes">
-    <option value="maxresdefault">1280x720</option>
-    <option value="sddefault">640x480</option>
-    <option value="hqdefault">480x360</option>
-    <option value="mqdefault"selected>320x180</option>
-    <option value="default" >120x90</option>
-  </select>
+  <div id="box" >
 
-  <button id="downloadImage" >downloadImage</button>
+
+    <div class="extractor">
+
+      <img src=""  id="ThumbId">
+
+      <select name="res"  id="selectRes">
+        <option value="maxresdefault">1280x720</option>
+        <option value="sddefault">640x480</option>
+        <option value="hqdefault">480x360</option>
+        <option value="mqdefault"selected>320x180</option>
+        <option value="default" >120x90</option>
+      </select>
+    
+      <button id="downloadImage" >downloadImage</button>
+
+    </div>
+    <div class="message">
+      <span>This is not a YouTube video page</span>
+    </div>
+  </div>
 </body>
 </html>

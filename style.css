@@ -1,0 +1,16 @@
+body {
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+}
+
+.extractor {
+    display:  none;
+}
+
+.found .extractor{
+    display: block;
+}
+.found .message{
+    display: none;
+}

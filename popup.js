@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded',  function () {
       
             vId=params.get('v')
             document.getElementById("ThumbId").src=generateLink(vId);
+
+              document.getElementById("box").classList.add("found");
+          
         } else {
          
           console.log('This is not youtube');
