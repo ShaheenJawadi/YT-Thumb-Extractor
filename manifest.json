@@ -1,12 +1,11 @@
 {
-    "manifest_version": 2,
-    "name": "YTThumb Extractor",
-    "version": "1.0",
-    "description": "",
-    "browser_action": {
-      "default_icon": "images/icon.png",
-      "default_popup": "index.html"
-    },
-    "permissions": ["activeTab"]
-  
-  }
+  "manifest_version": 3,
+  "name": "YTThumb Extractor",
+  "version": "1.0",
+  "description": "",
+  "action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab","scripting","downloads"]
+}
