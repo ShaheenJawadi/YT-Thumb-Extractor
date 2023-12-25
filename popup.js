@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded',  function () {
     
     document.getElementById('downloadImage').addEventListener('click', function () {
         
-        var imageUrl = 'https://i.ytimg.com/vi/'+vId+'/'+resolution+'.jpg';
+        var imageUrl = generateLink(vId , resolution);
 
         console.log(vId)
     
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded',  function () {
             console.log('Image downloaded');
           }
         });
-      });
+    });
    
 
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -37,12 +37,19 @@ document.addEventListener('DOMContentLoaded',  function () {
         if (url.hostname === 'www.youtube.com' &&params.has('v') ) {
       
             vId=params.get('v')
-            document.getElementById("ThumbId").src='https://i.ytimg.com/vi/'+vId+'/mqdefault.jpg'
+            document.getElementById("ThumbId").src=generateLink(vId);
         } else {
          
           console.log('This is not youtube');
         }
-      });
+    });
+
+    function generateLink(vId , res='mqdefault')
+    {
+        return 'https://i.ytimg.com/vi/'+vId+'/'+res+'.jpg';
+
+    }  
+
 
 });
   
