@@ -1,16 +1,40 @@
 body {
     width: 400px;
-    height: 200px;
     padding: 10px;
+    background: #fff;
 }
 
 .extractor {
     display:  none;
+
+
 }
 
 .found .extractor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.found .extractor img {
+
+    border-radius: 5px;
     display: block;
+
+}
+
+.found .extractor .utils{
+    display: flex;
+    margin-top: 10px;
 }
 .found .message{
     display: none;
+}
+
+.message span {
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    color: #000; 
 }
