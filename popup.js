@@ -1,4 +1,6 @@
 
+
+var resolution='mqdefault' , vId   ;
 document.addEventListener('DOMContentLoaded',  function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         var activeTab = tabs[0];
@@ -7,7 +9,8 @@ document.addEventListener('DOMContentLoaded',  function () {
         var params = url.searchParams;
         if (url.hostname === 'www.youtube.com' &&params.has('v') ) {
       
-          console.log('This is youtube');
+            vId=params.get('v')
+            document.getElementById("ThumbId").src='https://i.ytimg.com/vi/'+vId+'/mqdefault.jpg'
         } else {
          
           console.log('This is not youtube');
