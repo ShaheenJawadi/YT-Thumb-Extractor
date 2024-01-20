@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "YTThumb Extractor",
   "version": "1.0",
-  "description": "",
+  "description": "Chrome extension for quick and easy YouTube thumbnail extraction",
   "action": {
     "default_icon": "images/icon.png",
     "default_popup": "index.html"
